@@ -27,7 +27,7 @@ case "$machine" in
 esac
 
 asset="hew-${arch}-${os_name}.tar.gz"
-url="https://github.com/marler8997/hew/releases/latest/download/$asset"
+url="https://github.com/hew-org/hew/releases/latest/download/$asset"
 
 tmpdir=$(mktemp -d)
 
@@ -52,5 +52,5 @@ fi
 chmod +x "$hew_exe"
 
 printf 'hew: installing...\n'
-"$hew_exe" install github:marler8997/hew
+"$hew_exe" install github:hew-org/hew
 rm -rf "$tmpdir"

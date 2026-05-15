@@ -15,7 +15,7 @@ switch ($nativeArch) {
 }
 
 $asset = "hew-$arch-windows.zip"
-$downloadUrl = "https://github.com/marler8997/hew/releases/latest/download/$asset"
+$downloadUrl = "https://github.com/hew-org/hew/releases/latest/download/$asset"
 
 $tmpDir = Join-Path $env:TEMP "hew-bootstrap"
 $zipPath = Join-Path $tmpDir $asset
@@ -37,7 +37,7 @@ if (-not (Test-Path $hewExe)) {
 }
 
 Write-Host "hew: installing..."
-& $hewExe install github:marler8997/hew
+& $hewExe install github:hew-org/hew
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
